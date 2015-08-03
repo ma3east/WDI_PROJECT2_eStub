@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803150255) do
+ActiveRecord::Schema.define(version: 20150803150851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150803150255) do
     t.text     "venue"
     t.string   "city"
     t.float    "price"
-    t.string   "stub_file_upload"
+    t.text     "stub_file_upload"
     t.text     "event_url"
     t.integer  "rating"
     t.string   "accompanied_by"
