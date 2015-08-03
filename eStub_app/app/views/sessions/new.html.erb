@@ -1,15 +1,30 @@
+<br />
+<br />
+<h1>Welcome to eStub</h1>
+
+<p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times. </p>
+
+<h3>Take your Stubs out of the shoebox and into the eStub</h3>
+
 <h1>Sessions#new</h1>
 <p>Find me in app/views/sessions/new.html.erb</p>
 
-<h1>Login</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>
+<h1>User Login</h1>
+<section>
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
+    </div>
+    <div class="field">
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </div>
+    <div class="actions"><%= submit_tag "Log in" %></div>
+  <% end %>
+</section>
+
+<section>
+  <h1>Don't currently have an account?  Sign Up!</h1>
+</section>
+
