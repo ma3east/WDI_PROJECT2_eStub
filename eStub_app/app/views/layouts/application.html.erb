@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EStubApp</title>
+  <title>eStub App</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <% flash.each do |first_name, message| %>
+  <div class="flash-message flash-message-<%= first_name %>">
+    <%= message %> 
+  </div>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
