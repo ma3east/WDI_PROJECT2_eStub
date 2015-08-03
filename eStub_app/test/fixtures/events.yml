@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  date: 2015-08-03
+  venue: MyText
+  city: MyString
+  price: 1.5
+  stub_file_upload: MyString
+  text: MyString
+  event_url: MyText
+  rating: 1
+  accompanied_by: MyString
+  description: MyText
+
+two:
+  name: MyText
+  date: 2015-08-03
+  venue: MyText
+  city: MyString
+  price: 1.5
+  stub_file_upload: MyString
+  text: MyString
+  event_url: MyText
+  rating: 1
+  accompanied_by: MyString
+  description: MyText
