@@ -1,6 +1,6 @@
 <h1>users show page.html</h1>
 <ul>
-  <li><h2><%= @user.username %><h2></li>
+  <li><h2><%= @user.first_name %><h2></li>
   <li><%= image_tag @user.profile_pic %></li>
   <% if current_user == @user %>
   <li><%= link_to 'Edit account details', edit_user_path(@user) %></li>
@@ -17,4 +17,4 @@
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', root_path %>

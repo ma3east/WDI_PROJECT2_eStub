@@ -1,0 +1,28 @@
+<h1>Home Page</h1>
+<p>Find me in app/views/application/_home.html.erb</p>
+
+
+<br />
+<br />
+<h1>Welcome to eStub</h1>
+
+<p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times. </p>
+
+<h3>Take your Stubs out of the shoebox and into the eStub</h3>
+
+<% if current_user %>
+<p>Hello, <%= current_user.first_name %></p></p>
+<%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% else %>
+<%= link_to 'Please login', login_path %>
+<% end %>
+
+<% flash.each do |name, message| %>
+<div class="flash-message flash-message-<%= name %>">
+  <%= message %> 
+</div>
+<% end %>
+
+<section>
+  <h1>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h1>
+</section>
