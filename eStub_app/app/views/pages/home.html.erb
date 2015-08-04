@@ -16,8 +16,8 @@
 <% if current_user %>
 <h2>Hi, <%= current_user.first_name %></h2>
 
-<p>Access your profile here: <%= link_to current_user.first_name + "s" + " profile", user_path(current_user) %></p>
-<%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<p>Access your profile here: <%= link_to current_user.first_name + "'s" + " profile", user_path(current_user) %></p>
+<%= button_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% else %>
 <h2>Have an account? <%= link_to 'Please login', login_path %></h2>
 <% end %>

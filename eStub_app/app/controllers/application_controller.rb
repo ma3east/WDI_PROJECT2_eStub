@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    !!current_user
+    #!!current_user #was this one
+    !current_user.nil?
   end
 
   def authenticate
