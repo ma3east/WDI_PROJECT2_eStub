@@ -6,22 +6,23 @@
 
 <h3>Take your Stubs out of the shoebox and into the eStub</h3>
 
-<% if current_user %>
-<p>Hello, <%= current_user.first_name %></p>
-
-
-
-<%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<% else %>
-<%= link_to 'Please login', login_path %>
-<% end %>
-
 <% flash.each do |name, message| %>
 <div class="flash-message flash-message-<%= name %>">
   <%= message %> 
 </div>
 <% end %>
+<br />
+<% if current_user %>
+<h2>Hi, <%= current_user.first_name %></h2>
+
+<p>Access your profile here: <%= link_to current_user.first_name + "s" + " profile", user_path(current_user) %></p>
+<%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% else %>
+<h2>Have an account? <%= link_to 'Please login', login_path %></h2>
+<% end %>
 
 <section>
-  <h1>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h1>
+  <% if !current_user %>
+  <h3>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h3>
+  <% end %>
 </section>
