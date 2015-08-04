@@ -1,17 +1,16 @@
-<h1>Home Page</h1>
-<p>Find me in app/views/application/_home.html.erb</p>
+<h1>Welcome to eStub | HomePage</h1>
 
-
-<br />
-<br />
-<h1>Welcome to eStub</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
 
 <p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times. </p>
 
 <h3>Take your Stubs out of the shoebox and into the eStub</h3>
 
 <% if current_user %>
-<p>Hello, <%= current_user.first_name %></p></p>
+<p>Hello, <%= current_user.first_name %></p>
+
+
+
 <%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% else %>
 <%= link_to 'Please login', login_path %>

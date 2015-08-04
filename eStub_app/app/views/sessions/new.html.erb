@@ -1,7 +1,10 @@
+<h1>eStub Login Page</h1>
+<p>Please login to access the site and start managing your events.</p>
+
 <h1>Sessions#new</h1>
 <p>Find me in app/views/sessions/new.html.erb</p>
 
-<h1>User Login</h1>
+<h2>User Login</h2>
 <section>
   <%= form_tag sessions_path do %>
     <div class="field">
@@ -14,6 +17,13 @@
     </div>
     <div class="actions"><%= submit_tag "Log in" %></div>
   <% end %>
+
+  <% flash.each do |name, message| %>
+  <div class="flash-message flash-message-<%= name %>">
+    <%= message %> 
+  </div>
+  <% end %>
+  
 </section>
 
 
