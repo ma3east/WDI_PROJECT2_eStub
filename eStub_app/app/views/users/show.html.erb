@@ -9,16 +9,22 @@
   </li>
   <% end %>
   </ul>
+ 
+
   <h2>My Events</h2>
 
 <ul>
+  <p>List of your events:</p>
     <% @user.events.each do |event| %>
       <%= link_to event.name, event %>
     <% end %>
 </ul>
 
+<h2>Add Event</h2>
+
+
 
 <% if @user.id == current_user.id %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Home Page', root_path %>
 <% end %>

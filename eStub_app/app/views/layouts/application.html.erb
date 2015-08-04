@@ -16,10 +16,10 @@
     <%= render "layouts/header" %>
   </div>
 
-  <main class="wrapper">
+  <main>
     
     <%= yield %>
-
+    <br />
     <%= debug(params) if Rails.env.development? %>
 
     <div class="push"></div>

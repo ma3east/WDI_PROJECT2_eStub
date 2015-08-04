@@ -1,0 +1,69 @@
+<%= form_for(@event) do |f| %>
+<% if @event.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+  <ul>
+    <% @event.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<section>
+<br />
+<div class="field">
+  <%= f.label "Enter your events name:" %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :date, "Date of Event:" %><br>
+  <%= f.date_select :date %>
+</div>
+<div class="field">
+  <%= f.label :venue %><br>
+  <%= f.text_field :venue %>
+</div>
+<div class="field">
+  <%= f.label :city %><br>
+  <%= f.text_field :city %>
+</div>
+<div class="field">
+  <%= f.label :price %><br>
+  <%= f.number_field :price %>
+</div>
+
+<div class="field">
+  <%= f.label "Who where you with?" %><br>
+  <%= f.text_field :accompanied_by %>
+</div>
+
+<div class="field">
+  <%= f.label 'Upload a picture of your ticket stub' %><br>
+  <%= f.text_field :stub_file_upload %>
+</div>
+<div class="field">
+  <%= f.label 'or link to a url related to the event' %><br>
+  <%= f.text_area :event_url %>
+</div>
+<div class="field">
+  <%= f.label "Any comments you want to make on the event"%><br>
+  <%= f.text_area :description %>
+</div>
+<div class="field">
+  <%= f.label :rating %><br>
+  <%= f.select :rating, options_for_select(["Awesome", "Great", "Amazing", "Good", "Okay", "Waste of my time"]) %>
+</div>
+<div class="field">
+  <%= f.label :share, "Would you like this event to be shared with everyone?" %><br>
+  <%= f.select :share, options_for_select(["Yes", "No"]) %>
+</div>
+<div class="field">
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+</section>
