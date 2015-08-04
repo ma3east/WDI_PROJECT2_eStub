@@ -9,8 +9,10 @@
   <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
   <% if current_user == @event.user %>
   <li>
+    <% if @event.user.id == current_user.id %>
     <%= link_to "Edit", edit_event_path(@event) %>
     <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </li>
   <% end %>
 </ul>

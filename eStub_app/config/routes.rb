@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "sign_up", to: "users#new", as: "sign_up"
   resources :users
 
-  resources :event
+  resources :events
   resources :categories
 
   delete "/logout", to: "sessions#destroy"

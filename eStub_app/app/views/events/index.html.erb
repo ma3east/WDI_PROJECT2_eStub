@@ -8,5 +8,9 @@
 <% end %>
 
 <ul>
-<%= render @events %>
+<% @events.each do |event| %>
+  <% if event.share != "No" %>
+  <li><%= link_to event.name, event %></li>
+  <% end %>
+<% end %>
 </ul>

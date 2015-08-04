@@ -1,8 +1,8 @@
 <h1><%= @user.first_name%> <%= @user.last_name%> account page</h1>
 <h3>users show page.html</h3>
 <ul>
-  <li><%= image_tag @user.profile_pic %></li>
   <% if current_user == @user %>
+  <li><%= image_tag @user.profile_pic %></li>
   <li><%= link_to 'Edit account details', edit_user_path(@user) %></li>
   <li>
     <%= link_to 'Remove Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -12,9 +12,13 @@
   <h2>My Events</h2>
 
 <ul>
-    <%= render @user.events %>
+    <% @user.events.each do |event| %>
+      <%= link_to event.name, event %>
+    <% end %>
 </ul>
 
 
+<% if @user.id == current_user.id %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', root_path %>
+<% end %>
