@@ -1,29 +1,33 @@
-* {
-  margin: 0;
-}
-.header {
-  height: 75px;
-  border-bottom: 1px solid black;
-}
+// * {
+//   margin: 0;
+// }
+// .header {
+//   height: 75px;
+//   border-bottom: 1px solid black;
+// }
 
-html, body {
-  height: 100%;
+// html, body {
+//   height: 100%;
+// }
+// .wrapper {
+//   min-height: 100%;
+//   margin: 0 auto -75px; /* the bottom margin is the negative value of the footer's height */
+// }
+// .header, .push {
+//   height: 75px; /* .push must be the same height as .footer */
+// }
+header {
+  height: 100px;
+  display: inline-block;
 }
-.wrapper {
-  min-height: 100%;
-  margin: 0 auto -75px; /* the bottom margin is the negative value of the footer's height */
-}
-.header, .push {
-  height: 75px; /* .push must be the same height as .footer */
-}
-
 
 .logo {
-  float: left;
+  // float: left;
 }
 
 ul li {
-  float: right;
+  // float: right;
   padding: 10px;
   list-style-type: none;
+  display: inline-block;
 }
