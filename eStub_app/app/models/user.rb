@@ -15,6 +15,4 @@ class User < ActiveRecord::Base
     (minimum 13)' if value > (13.years.ago).to_date
   end
 
-
-
 end

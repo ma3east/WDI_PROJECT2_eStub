@@ -1,2 +1,16 @@
 <h1>Events#show</h1>
 <p>Find me in app/views/events/show.html.erb</p>
+
+<ul>
+  <li><h2><%= @event.name %></h2></li>
+  <li><h2><%= @event.date %></h2></li>
+  <li><h2><%= @event.venue %></h2></li>
+  <li><%= image_tag @event.stub_file_upload %></li>
+  <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
+  <% if current_user == @event.user %>
+  <li>
+    <%= link_to "Edit", edit_event_path(@event) %>
+    <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </li>
+  <% end %>
+</ul>

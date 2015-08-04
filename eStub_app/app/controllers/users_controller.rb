@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, only: [:show]
 
   # GET /users
   # GET /users.json
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    redirect_to root_path unless authenticate_user(@user)
   end
 
   # POST /users
@@ -26,7 +28,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_path
+      session[:user_id] = @user.id
+      redirect_to @user, notice: 'User was successfully created.'
     else
       render 'new'
     end
@@ -38,7 +41,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
       end

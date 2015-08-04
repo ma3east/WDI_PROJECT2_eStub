@@ -1,33 +1,20 @@
-<h1>blah blah blah this is the show</h1>
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<h1>users show page.html</h1>
+<ul>
+  <li><h2><%= @user.username %><h2></li>
+  <li><%= image_tag @user.profile_pic %></li>
+  <% if current_user == @user %>
+  <li><%= link_to 'Edit account details', edit_user_path(@user) %></li>
+  <li>
+    <%= link_to 'Remove Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </li>
+  <% end %>
+  </ul>
+  <h2>My Events</h2>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<ul>
+    <%= render @user.events %>
+</ul>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Date of birth:</strong>
-  <%= @user.date_of_birth %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <strong>Profile pic:</strong>
-  <%= @user.profile_pic %>
-</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

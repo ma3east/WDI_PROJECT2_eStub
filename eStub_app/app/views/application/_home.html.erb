@@ -1,0 +1,12 @@
+<% if current_user %>
+<p>Hello, <%= current_user.first_name %></p></p>
+<%= button_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% else %>
+<%= link_to 'Please login', login_path %>
+<% end %>
+
+<% flash.each do |name, message| %>
+<div class="flash-message flash-message-<%= name %>">
+  <%= message %> 
+</div>
+<% end %>

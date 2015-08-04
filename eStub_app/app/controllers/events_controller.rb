@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, only: [:new, :create, :show]
 
   def index
     @events = Event.all
@@ -10,10 +11,15 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def edit
+      redirect_to @event unless authenticate_user(@event.user)
+    end
+
   def show
   end
 
   def create
+    params[:event][:user_id] = current_user.id
     @event = Event.new(event_params)
 
     respond_to do |format|
@@ -26,6 +32,7 @@ class EventsController < ApplicationController
   end
 
   def update
+    redirect_to @event unless authenticate_user(@event.user)
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -36,6 +43,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    redirect_to @event unless authenticate_user(@event.user)
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
