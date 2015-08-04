@@ -3,23 +3,22 @@
 <ul>
   <% if current_user == @user %>
   <li><%= image_tag @user.profile_pic %></li>
-  <li><%= link_to 'Edit account details', edit_user_path(@user) %></li>
+  <li><%= link_to 'Edit user account', edit_user_path(@user) %></li>
   <li>
     <%= link_to 'Remove Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
   </li>
   <% end %>
-  </ul>
- 
-
-  <h2>My Events</h2>
-
-<ul>
-  <p>List of your events:</p>
-    <% @user.events.each do |event| %>
-      <%= link_to event.name, event %>
-    <% end %>
 </ul>
 
+<h2>My Events</h2>
+<% @user.events.each do |event| %>
+<ul>
+  <li>
+    <%= link_to event.name, event %>
+  </li>
+</ul>
+<% end %>
+<br/>
 <h2>Add Event</h2>
 
 

@@ -1,10 +1,10 @@
 <h1>Events#index</h1>
 <p>Find me in app/views/events/index.html.erb</p>
 
-<% if current_user && params[:action]=="user_events" %>
+<% if current_user && params[:action] == "user_events" %>
 <h1>My Events</h1>
 <% else %>
-<h1>Welcome to eStub</h1>
+<h1>List of Shared Events</h1>
 <% end %>
 
 <ul>
@@ -12,5 +12,6 @@
   <% if event.share != "No" %>
   <li><%= link_to event.name, event %></li>
   <% end %>
-<% end %>
+
 </ul>
+<% end %>
