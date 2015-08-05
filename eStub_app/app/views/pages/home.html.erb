@@ -1,23 +1,25 @@
 <br />
 <h1>Welcome to eStub | HomePage</h1>
+<br/>
+<p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times.</p>
 
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times. </p>
+<br/>
 
 <h3>Take your Stubs out of the shoebox and into the eStub</h3>
 
-<% flash.each do |name, message| %>
-<div class="flash-message flash-message-<%= name %>">
-  <%= message %> 
-</div>
-<% end %>
-<br />
+<br/>
+
 <% if current_user %>
-<h2>Hi, <%= current_user.first_name %></h2>
+
+<h2>Hi, <%= (current_user.first_name).capitalize %></h2>
+
+<br />
 
 <p>Access your profile here: <%= link_to current_user.first_name + "'s" + " profile", user_path(current_user) %></p>
-<%= button_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+
+<br />
+
+<%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% else %>
 <h2>Have an account? <%= link_to 'Please login', login_path %></h2>
 <% end %>
@@ -27,3 +29,10 @@
   <h3>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h3>
   <% end %>
 </section>
+<br />
+<% flash.each do |name, message| %>
+<div class="flash-message flash-message-<%= name %>">
+  <%= message %> 
+</div>
+<% end %>
+<br />

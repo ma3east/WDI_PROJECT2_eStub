@@ -7,13 +7,15 @@
   <li>Venue: <%= @event.venue %></li>
   <li>City: <%= @event.city %></li>
   
-  <li>Rating: <%= @event.rating %></li>
+  <li>Rated: <%= @event.rating %></li>
+  <li>Comments: <%= @event.description %></li>
 
   <% if current_user == @event.user %>
 
-  <li><%= @event.price %></li>
-  <li><%= @event.accompanied_by %></li>
+  <li>Price: <%= @event.price %></li>
+  <li>Who you were with: <%= @event.accompanied_by %></li>
   <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
+  <li>Was this event shared? <%= @event.share %></li>
 
 </ul>
 <ul>
@@ -32,11 +34,19 @@
 <ul>
   <li>Comments: <%= @event.description %></li>
 </ul>
+<% if @event.user.id == current_user.id %>
+<h3>Modify this event:</h3>
 <li>
-  <% if @event.user.id == current_user.id %>
-  <%= link_to "Edit Event", edit_event_path(@event) %>
-  <%= link_to 'Delete Event', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <%= link_to "Back", events_path %>
+  <%= link_to "Edit", edit_event_path(@event) %>
+  <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+</li>
+<br />
+<h3>Add another event:</h3>
+<li><%= link_to "Add", new_event_path %></li>
+<br />
+<h3>Return to Event Index:</h3>
+<li>
+  <%= link_to "Event Index", events_path %>
   <% end %>
 </li>
 <% end %>

@@ -37,9 +37,16 @@ u8 = User.create!(first_name: 'tommy', last_name: 'adams', email: 'tommy@gmail.c
 
 
 
-# Event(id: integer, name: text, date: date, venue: text, city: string, price: float, stub_file_upload: string, text: string, event_url: text, rating: integer, accompanied_by: string, description: text, created_at: datetime, updated_at: datetime, category_id: integer, user_id: integer)
+# Event(id: integer, name: text, date: date, venue: text, city: string, price: float, stub_file_upload: text, event_url: text, rating: integer, accompanied_by: string, description: text, created_at: datetime, updated_at: datetime, category_id: integer, user_id: integer, share: string)
 
 e1 = Event.create!(name: "FA Community Shield", date: "2015-02-08", venue: "Wembley", city: "London", price: "45.00", accompanied_by: "brother", description: "Great game, 1 - 0 to the Arsenal, yes.", user_id: u1.id, share: "Yes")
+
+e2 = Event.create!(name: "Football", date: "2015-02-06", venue: "Wembley", city: "London", price: "35.00", event_url: "http://www.uefa.com/MultimediaFiles/Photo/competitions/DomesticCup/02/13/11/84/2131184_w2.jpg", accompanied_by: "brother", description: "Great game, 2 - 0 to the Arsenal, yes.", user_id: u1.id, share: "Yes")
+
+
+
+
+
 
 
 
