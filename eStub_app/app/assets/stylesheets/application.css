@@ -12,21 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
 
 
- body {
-  margin: 0 20px;
-}
-
-.index_image {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-}
-
-img {
-  width: 320px;
-  height: 213px;
-  border-radius: 10px;
-}
+ 

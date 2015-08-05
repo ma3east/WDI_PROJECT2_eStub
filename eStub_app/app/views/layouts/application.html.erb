@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>eStub App</title>
-
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "eStub" %></title>
   
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' => true %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="header">
+<div>
     <%= render "layouts/header" %>
   </div>
 
   <main>
-    
+
     <%= yield %>
-    
+
     <div class="push"></div>
 
   </main>
-  <div class="footer">
+  <div>
     <%= render "layouts/footer"%>
   </div>
 
