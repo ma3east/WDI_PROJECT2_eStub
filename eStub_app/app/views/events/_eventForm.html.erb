@@ -30,7 +30,7 @@
 </div>
 <div class="field">
   <%= f.label :price %><br>
-  <%= f.number_field :price %>
+  <%= f.number_field :price, :step => 0.01 %>
 </div>
 
 <div class="field">
@@ -52,12 +52,12 @@
 </div>
 <div class="field">
   <%= f.label :rating %><br>
-  <%= f.select :rating, options_for_select(["Awesome", "Great", "Amazing", "Good", "Okay", "Waste of my time"]) %>
+  <%= f.select :rating, options_for_select([5, 4, 3, 2, 1, 0]) %>
 </div>
 <div class="field">
   <%= f.label :share, "Would you like this event to be shared with everyone?" %><br>
   <p>Note: By sharing, some event details will be displayed for everyone. No personal details will be displayed.</p>
-  <%= f.select :share, options_for_select(["Yes", "No"]) %>
+  <%= f.select :share, options_for_select(["No", "Yes"]) %>
 </div>
 <div class="field">
   <%= f.hidden_field :user_id, :value => current_user.id %>

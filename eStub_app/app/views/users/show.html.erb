@@ -5,7 +5,7 @@
   <li><%= image_tag @user.profile_pic %></li>
 
   <li><%= link_to 'Edit profile', edit_user_path(@user) %></li>
-  <li>
+  <li>(Warning Irreversible!)
     <%= button_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
   </li>
   <% end %>
@@ -21,10 +21,7 @@
 <% end %>
 <br/>
 <h2>Add Event</h2>
+<%= link_to "Add Event", new_event_path %>
 
 
 
-<% if @user.id == current_user.id %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-
-<% end %>

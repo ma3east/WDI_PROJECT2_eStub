@@ -12,10 +12,12 @@ class EventsController < ApplicationController
   end
 
   def edit
-      redirect_to @event unless authenticate_user(@event.user)
-    end
+    redirect_to @event unless authenticate_user(@event.user)
+  end
 
   def show
+    if current_user && params[:action] == "user_events" ? render 'showUser' : render 'showNonUser'
+    end
   end
 
   def create
@@ -51,9 +53,9 @@ class EventsController < ApplicationController
   end
   
   private
-      def set_event
-        @event = Event.find(params[:id])
-      end
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def event_params
@@ -61,4 +63,4 @@ class EventsController < ApplicationController
       end
 
 
-end
+    end
