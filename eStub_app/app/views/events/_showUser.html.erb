@@ -21,7 +21,7 @@
 <ul>
   <li>
     <% if @event.stub_file_upload.present? %>
-    <%= image_tag @event.stub_file_upload %>
+    <%= image_tag @event.stub_file_upload.url %>
     <% elsif %>
     <% @event.event_url.present? %>
     <%= image_tag @event.event_url %>

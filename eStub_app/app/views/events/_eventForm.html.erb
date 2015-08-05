@@ -37,10 +37,9 @@
   <%= f.label "Who where you with?" %><br>
   <%= f.text_field :accompanied_by %>
 </div>
-
 <div class="field">
   <%= f.label 'Upload a picture of your ticket stub' %><br>
-  <%= f.text_field :stub_file_upload %>
+  <%= f.file_field :stub_file_upload %>
 </div>
 <div class="field">
   <%= f.label 'or link to a url related to the event' %><br>

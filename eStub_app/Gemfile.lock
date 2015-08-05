@@ -148,7 +148,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
-  carrierwave
+  carrierwave (= 0.10.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg
