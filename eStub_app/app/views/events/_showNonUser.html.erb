@@ -9,6 +9,7 @@
   <li>City: <%= @event.city %></li>
   <li>Rating Scale (0 - 5): <%= @event.rating %></li>
 
+
   <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
 
 </ul>

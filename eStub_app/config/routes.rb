@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :events
   resources :categories
 
-  delete "/logout", to: "sessions#destroy"
+  get "/logout", to: "sessions#destroy"
 
   
 end

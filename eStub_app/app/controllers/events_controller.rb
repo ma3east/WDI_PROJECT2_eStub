@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate, only: [:new, :create, :show]
+  before_action :authenticate, only: [:new, :create]
 
   def index
     @events = Event.all
@@ -16,8 +16,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    if current_user && params[:action] == "user_events" ? render 'showUser' : render 'showNonUser'
-    end
+    # if current_user && params[:action] == "user_events" ? render 'showUser' : render 'showNonUser'
+    # end
   end
 
   def create
@@ -53,14 +53,12 @@ class EventsController < ApplicationController
   end
   
   private
-  def set_event
-    @event = Event.find(params[:id])
-  end
-
-      # Never trust parameters from the scary internet, only allow the white list through.
-      def event_params
-        params.require(:event).permit(:name, :date, :venue, :city, :price, :stub_file_upload, :event_url, :rating, :accompanied_by, :description, :category_id, :user_id, :share)
-      end
-
-
+    def set_event
+      @event = Event.find(params[:id])
     end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def event_params
+      params.require(:event).permit(:name, :date, :venue, :city, :price, :stub_file_upload, :event_url, :rating, :accompanied_by, :description, :category_id, :user_id, :share)
+    end
+end

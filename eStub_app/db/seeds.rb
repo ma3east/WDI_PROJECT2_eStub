@@ -37,11 +37,9 @@ u3 = User.create!(first_name: 'tommy', last_name: 'adams', email: 'tommy@gmail.c
 
 # Event(id: integer, name: text, date: date, venue: text, city: string, price: float, stub_file_upload: string, text: string, event_url: text, rating: integer, accompanied_by: string, description: text, created_at: datetime, updated_at: datetime, category_id: integer, user_id: integer)
 
-e1 = Event.create!(name: "FA Community Shield", date: "2015-02-08", venue: "Wembley", city: "London", price: "45.00", accompanied_by: "brother", description: "Great game, 1 - 0 to the Arsenal, yes.")
+e1 = Event.create!(name: "FA Community Shield", date: "2015-02-08", venue: "Wembley", city: "London", price: "45.00", accompanied_by: "brother", description: "Great game, 1 - 0 to the Arsenal, yes.", user_id: u1.id, share: "Yes")
 
-ul.events << e1
 
-c3.events << e1
 
 
 

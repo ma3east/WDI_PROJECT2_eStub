@@ -11,8 +11,9 @@
   <li><%= @event.accompanied_by %></li>
   <li>Rating: <%= @event.rating %></li>
 
-  <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
   <% if current_user == @event.user %>
+
+  <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
 
 </ul>
 <ul>
@@ -23,9 +24,7 @@
     <% @event.event_url.present? %>
     <%= image_tag @event.event_url %>
     <% else %>
-
     "No image available."
-
     <% end %>
   </li>
 </ul>
@@ -37,6 +36,7 @@
   <% if @event.user.id == current_user.id %>
   <%= link_to "Edit Event", edit_event_path(@event) %>
   <%= link_to 'Delete Event', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to "Back", current_user %>
   <% end %>
 </li>
 <% end %>
