@@ -6,7 +6,7 @@
 
   <li><%= link_to 'Edit profile', edit_user_path(@user) %></li>
   <li>(Warning Irreversible!)
-    <%= button_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
   </li>
   <% end %>
 </ul>
