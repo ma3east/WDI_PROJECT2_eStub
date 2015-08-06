@@ -1,26 +1,14 @@
-// // * {
-// //   margin: 0;
-// // }
-// // .header {
-// //   height: 75px;
-// //   border-bottom: 1px solid black;
-// // }
+// header {
+//   width: 100%;
+//   height: 80px;
+//   display: inline-block;
+//   border-bottom: 1px solid black;
+//   background-color: green;
+// }
 
-// // html, body {
-// //   height: 100%;
-// // }
-// // .wrapper {
-// //   min-height: 100%;
-// //   margin: 0 auto -75px; /* the bottom margin is the negative value of the footer's height */
-// // }
-// // .header, .push {
-// //   height: 75px; /* .push must be the same height as .footer */
-// // }
-header {
-  width: 100%;
-  height: 80px;
-  display: inline-block;
-  border-bottom: 1px solid black;
+.top-bar {
+  height: 4.5em;
+  line-height: 4.5em;
 }
 
 ul li {

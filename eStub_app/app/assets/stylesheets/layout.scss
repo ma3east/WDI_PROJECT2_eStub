@@ -12,21 +12,39 @@ body {
   color: red;
 }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -2em;
+}
+.footer, .push {
+  height: 2em;
+}
+
+.foot2 {
+  background-color: lightblue;
+  text-align: center;
+}
+img.contact_logo{
+  width: 2em;
+  height: 2em;
+  padding-right: 5px;
+  transition: 0.3s;
+}
+
+img.contact_logo:hover {
+  opacity: 0.6;
+}
+img {
+  width: 320px;
+  height: 213px;
+  border-radius: 10px;
+}
+.index_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
 
 
-
-//  body {
-//   margin: 0 40px;
-// }
-
-// .index_image {
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 10px;
-// }
-
-// img {
-//   width: 320px;
-//   height: 213px;
-//   border-radius: 10px;
-// }
