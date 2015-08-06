@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul class="left">
-      <li>eStub</li>
+      <li class="logo">eStub</li>
       <li><%= link_to 'Home', root_path %></li>
       </ul>
 
@@ -9,6 +9,14 @@
     <% if current_user %>
       <li>Profile: <%= link_to (current_user.first_name).capitalize, user_path(current_user) %> | </li>
       <li><%= link_to 'Events', events_path %> | </li>
+
+      <% if current_user.first_name == "Andrea" %>
+
+      <li><%= link_to 'Users', users_path %> | </li>
+
+      <% end %>
+
+
       <li><%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %></li>
 
       <% else %>

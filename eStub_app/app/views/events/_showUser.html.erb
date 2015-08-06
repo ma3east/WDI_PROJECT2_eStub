@@ -14,7 +14,7 @@
 
   <li>Price: <%= @event.price %></li>
   <li>Who you were with: <%= @event.accompanied_by %></li>
-  <li>Uploaded by: <%= link_to @event.user.first_name, user_path(@event.user.id) %></li>
+  <li>Uploaded by: <%= link_to (@event.user.first_name).capitalize, user_path(@event.user.id) %></li>
   <li>Was this event shared? <%= @event.share %></li>
 
 </ul>
@@ -44,8 +44,8 @@
 <h3 class="add">Add another event:</h3>
 <li class="add"><%= link_to "Add", new_event_path %></li>
 <br />
-<h3>Return to Event Index:</h3>
-<li>
+<h3 class="add">Return to Event Index:</h3>
+<li class="add">
   <%= link_to "Event Index", events_path %>
   <% end %>
 </li>

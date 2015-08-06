@@ -1,24 +1,24 @@
 <h1>Events Index</h1>
 
 <% if current_user %>
-<h3>Add event:</h3>
-<br />
-    <%= link_to "Add", new_event_path %>
+<h3 class="add">Add event:</h3>
+<p class="add"> <%= link_to "Add", new_event_path  %> </p>
 <h2>My Events</h2>
 <ul>
-<% @events.each do |event| %>
+  <% @events.each do |event| %>
   <% if event.user.id == current_user.id %>
-    <li><%= link_to event.name, event %></li>
+  <li><%= link_to event.name, event %></li>
   <% end %>
-<% end %>
+  <% end %>
 </ul>
 
 <% end %>
 
 <h2>All Users Shared Events</h2>
-<ul>
+
 <% @events.each do |event| %>
-  <% if event.share == "No" %>
+<ul>
+  <% if event.share == "Yes"  && event.user.id != current_user.id %>
   <li><%= link_to event.name, event %></li>
   <% end %>
 </ul>

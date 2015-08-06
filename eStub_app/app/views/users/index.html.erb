@@ -1,5 +1,8 @@
 
-<h1>Listing eStub Users index.html.erb</h1>
+<h1>Listing eStub Users</h1>
+
+<% if current_user.first_name == "Andrea" %>
+<h2>Hi Andrea!</h2>
 <br />
 <table>
   <thead>
@@ -15,18 +18,24 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr class="index_image">
-        <td><%= image_tag(user.profile_pic) %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        
-        <%# removed shoe=w, edit, destroy %>
-      </tr>
+    <tr class="index_image">
+      <td><%= image_tag(user.profile_pic) %></td>
+      <td><%= user.first_name.capitalize %></td>
+      <td><%= user.last_name.capitalize %></td>
+      <td><%= user.email %></td>
+      <td><%= link_to 'Show', user %></td>
+      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
 <%= link_to 'New User', new_user_path %>
+
+<% end %>
+
+<h2 style="text-align: center;" >You do not have access to see all users!</h2>
+
+<p style="text-align: center;" >Speak to an administrator for more details, or login or sign_up using the links above.</p>
+
+
