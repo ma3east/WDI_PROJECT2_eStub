@@ -3,10 +3,10 @@
     <ul class="left">
       <li class="logo">eStub</li>
       <li><%= link_to 'Home', root_path %></li>
-      </ul>
+    </ul>
 
-      <ul class="right">
-    <% if current_user %>
+    <ul class="right">
+      <% if current_user %>
       <li>Profile: <%= link_to (current_user.first_name).capitalize, user_path(current_user) %> | </li>
       <li><%= link_to 'Events', events_path %> | </li>
 
@@ -17,7 +17,9 @@
       <% end %>
 
 
-      <li><%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %></li>
+      <li>
+        <%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+      </li>
 
       <% else %>
       <li><%= link_to 'Events', events_path %></li>

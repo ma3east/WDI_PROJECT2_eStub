@@ -5,6 +5,22 @@ h1 {
   text-align: center;
 }
 
+.index_image img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
 .profile {
   text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0 1em;
+}
+
+td {
+    padding-top: .5em;
+    padding-left: 1.5em;
 }

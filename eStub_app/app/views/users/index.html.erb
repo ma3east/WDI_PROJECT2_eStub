@@ -1,5 +1,5 @@
 
-<h1>Listing eStub Users</h1>
+<h1>eStub - Users</h1>
 
 <% if current_user.first_name == "Andrea" %>
 <h2>Hi Andrea!</h2>
@@ -7,10 +7,10 @@
 <table>
   <thead>
     <tr>
-      <th>First name</th>
+      <th>Profile pic</th>
+      <th>Firstname</th>
       <th>Last name</th>
       <th>Email</th>
-      <th>Profile pic</th>
       
       <th colspan="3"></th>
     </tr>
@@ -18,24 +18,28 @@
 
   <tbody>
     <% @users.each do |user| %>
+
     <tr class="index_image">
-      <td><%= image_tag(user.profile_pic) %></td>
+    <td class="mini_profile"><%= image_tag(user.profile_pic) %></td>
       <td><%= user.first_name.capitalize %></td>
       <td><%= user.last_name.capitalize %></td>
       <td><%= user.email %></td>
       <td><%= link_to 'Show', user %></td>
       <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <%= link_to 'New User', new_user_path %>
 
-<% end %>
+<% else %>
 
 <h2 style="text-align: center;" >You do not have access to see all users!</h2>
 
 <p style="text-align: center;" >Speak to an administrator for more details, or login or sign_up using the links above.</p>
+
+<% end %>
 
 
