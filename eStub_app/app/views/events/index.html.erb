@@ -4,13 +4,13 @@
 <h3 class="add">Add event:</h3>
 <p class="add"> <%= link_to "Add", new_event_path  %> </p>
 <h2>My Events</h2>
+<% @events.each do |event| %>
 <ul>
-  <% @events.each do |event| %>
   <% if event.user.id == current_user.id %>
   <li><%= link_to event.name, event %></li>
   <% end %>
-  <% end %>
 </ul>
+<% end %>
 
 <% end %>
 
