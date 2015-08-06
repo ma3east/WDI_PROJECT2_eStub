@@ -1,0 +1,17 @@
+footer {
+  background-color: #FFC2CE;
+  text-align: center;
+  width: 100%;
+  color: red;
+}
+
+img.contact_logo{
+  width: 2em;
+  height: 2em;
+  padding-right: 5px;
+  transition: 0.3s;
+}
+
+img.contact_logo:hover {
+  opacity: 0.6;
+}

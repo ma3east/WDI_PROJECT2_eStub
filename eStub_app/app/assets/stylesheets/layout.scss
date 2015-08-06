@@ -1,69 +1,31 @@
-* {
-  margin: 0;
-}
-
 html, body {
   height: 100%;
-  margin: 0 auto;
+  margin: 0 30px;
 }
 
 body {
-  background-image: url('http://www.freevector.com/site_media/preview_images/FreeVector-Vector-Beach-Party.jpg');
-  height: 100%;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Audiowide', cursive;
   background-color: #FD6E8A;
-  color: white; //#A2122F;
-  border-top: 1px solid black;
+  color: #181616; //#A2122F;
   font-size: 16px;
 }
 
-.wrapper {
-  min-height: 100%;
-  // height: auto !important;
-  height: 100%;
-  margin: 0 20px;
-}
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+#error_explanation {
+  color: blue;
+  line-height: 2px;
+  border: 1px solid;
 }
 
 a {
   text-decoration: none;
 }
 
-//relates to footer .push needed for sticky footer
 
-.footer, .push {
-  height: 2em;
-}
-
-.foot2 {
-  background-color: #FFC2CE;
-  text-align: center;
-  width: 100%;
-}
-img.contact_logo{
-  width: 2em;
-  height: 2em;
-  padding-right: 5px;
-  transition: 0.3s;
-}
-
-img.contact_logo:hover {
-  opacity: 0.6;
-}
-// end of footer settings
 img {
-  width: 320px;
-  height: 213px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 }
-
-
 .index_image {
   width: 200px;
   height: 200px;

@@ -1,38 +1,40 @@
-<br />
-<h1>Welcome to eStub</h1>
-<br/>
-<p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times.</p>
+<div class="home">
+  <br />
+  <h1>Welcome to eStub</h1>
+  <br/>
+  <p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times.</p>
 
-<br/>
+  <br/>
 
-<h3>Take your Stubs out of the shoebox and into the eStub</h3>
+  <h3>Take your Stubs out of the shoebox and into the eStub</h3>
 
-<br/>
+  <br/>
 
-<% if current_user %>
+  <% if current_user %>
 
-<h2>Hi, <%= (current_user.first_name).capitalize %></h2>
+  <h2>Hi, <%= (current_user.first_name).capitalize %></h2>
 
-<br />
+  <br />
 
-<p>Access your profile here: <%= link_to (current_user.first_name).capitalize + "'s" + " profile", user_path(current_user) %></p>
+  <p>Access your profile here: <%= link_to (current_user.first_name).capitalize + "'s" + " profile", user_path(current_user) %></p>
 
-<br />
+  <br />
 
-<%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<% else %>
-<h2>Have an account? <%= link_to 'Please login', login_path %></h2>
-<% end %>
-<br />
-<section>
-  <% if !current_user %>
-  <h3>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h3>
+  <%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %>
+  <% else %>
+  <h2>Have an account? <%= link_to 'Please login', login_path %></h2>
   <% end %>
-</section>
-<br />
-<% flash.each do |name, message| %>
-<div class="flash-message flash-message-<%= name %>">
-  <%= message %> 
+  <br />
+  <section>
+    <% if !current_user %>
+    <h3>Don't currently have an account? <%= link_to 'Sign Up', sign_up_path %></h3>
+    <% end %>
+  </section>
+  <br />
+  <% flash.each do |name, message| %>
+  <div class="flash-message flash-message-<%= name %>">
+    <%= message %> 
+  </div>
+  <% end %>
+  <br />
 </div>
-<% end %>
-<br />

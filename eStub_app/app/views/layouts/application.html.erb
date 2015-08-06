@@ -9,7 +9,8 @@
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -18,13 +19,12 @@
     <%= render "layouts/header" %>
   </div>
 
-  <main class="wrapper">
+  <main>
     <%= yield %>
-    <div class="push"></div>
   </main>
   
-  <div class="footer">
+
     <%= render "layouts/footer"%>
-  </div>
+  
 </body>
 </html>
