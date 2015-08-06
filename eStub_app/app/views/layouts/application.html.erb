@@ -5,23 +5,26 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title><%= content_for?(:title) ? yield(:title) : "eStub" %></title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "vendor/modernizr" %>
+  <title>eStub</title>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
+
+  <div>
+    <%= render "layouts/header" %>
+  </div>
+
   <main class="wrapper">
-
-    <div><%= render "layouts/header" %></div>
-
     <%= yield %>
     <div class="push"></div>
-
   </main>
   
-  <div class="footer"><%= render "layouts/footer"%></div>
+  <div class="footer">
+    <%= render "layouts/footer"%>
+  </div>
 </body>
 </html>

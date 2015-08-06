@@ -4,19 +4,35 @@
 
 html, body {
   height: 100%;
-  margin: 0 50px;
+  margin: 0 auto;
 }
 
 body {
+  background-image: url('http://www.freevector.com/site_media/preview_images/FreeVector-Vector-Beach-Party.jpg');
+  height: 100%;
+  font-family: 'Gloria Hallelujah', cursive;
   background-color: #FD6E8A;
-  color: #A2122F;
+  color: white; //#A2122F;
+  border-top: 1px solid black;
+  font-size: 16px;
 }
 
 .wrapper {
   min-height: 100%;
-  height: auto !important;
+  // height: auto !important;
   height: 100%;
-  margin: 0 auto -2em;
+  margin: 0 20px;
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+a {
+  text-decoration: none;
 }
 
 //relates to footer .push needed for sticky footer
@@ -28,6 +44,7 @@ body {
 .foot2 {
   background-color: #FFC2CE;
   text-align: center;
+  width: 100%;
 }
 img.contact_logo{
   width: 2em;
