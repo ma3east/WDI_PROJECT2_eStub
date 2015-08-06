@@ -1,11 +1,12 @@
 <header>
   <nav class="top-bar row" data-topbar role="navigation">
-    <ul>
-      <li class="name left">eStub</li>
-      <li class="left"><%= link_to 'Home', root_path %></li>
+    <ul class="left">
+      <li>eStub</li>
+      <li><%= link_to 'Home', root_path %></li>
+      </ul>
 
-
-      <% if current_user %>
+      <ul class="right">
+    <% if current_user %>
       <li>Profile: <%= link_to (current_user.first_name).capitalize, user_path(current_user) %></li>
       <li><%= link_to 'Events', events_path %></li>
       <li><%= link_to 'Log out', logout_path, method: :delete, data: {confirm: "Are you sure?"} %></li>

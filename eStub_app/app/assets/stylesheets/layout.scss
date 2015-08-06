@@ -18,6 +18,9 @@ body {
   height: 100%;
   margin: 0 auto -2em;
 }
+
+//relates to footer .push needed for sticky footer
+
 .footer, .push {
   height: 2em;
 }
@@ -36,11 +39,14 @@ img.contact_logo{
 img.contact_logo:hover {
   opacity: 0.6;
 }
+// end of footer settings
 img {
   width: 320px;
   height: 213px;
   border-radius: 10px;
 }
+
+
 .index_image {
   width: 200px;
   height: 200px;
