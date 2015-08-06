@@ -16,10 +16,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr class="index_image">
+        <td><%= image_tag(user.profile_pic) %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td><%= image_tag(user.profile_pic) %></td>
+        
         <%# removed shoe=w, edit, destroy %>
       </tr>
     <% end %>
