@@ -1,17 +1,22 @@
+<section class="profile">
+  
 <h1><%= (@user.first_name).capitalize%> <%= (@user.last_name).capitalize %> - Profile Page</h1>
 <h3>users show page.html</h3>
 <ul>
   <% if current_user == @user %>
-  <li><%= image_tag @user.profile_pic %></li>
+  <li><%= image_tag @user.profile_pic %></li><br/>
 
-  <li><%= link_to 'Edit profile', edit_user_path(@user) %></li>
-  <li>(Warning Irreversible!)
+  <li><%= link_to 'Edit profile', edit_user_path(@user) %></li><br/>
+  <li>
     <%= link_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    (Warning Irreversible!)
   </li>
   <% end %>
 </ul>
-<br />
-<h3>My Events</h3>
+
+</section>
+
+<h3><%= (@user.first_name).capitalize + "'s " %>Events</h3>
 <% @user.events.each do |event| %>
 <ul>
   <li>
@@ -19,8 +24,7 @@
   </li>
 </ul>
 <% end %>
-<br/>
-<h3>Add Event</h3>
+<h3 class="add">Add New Event</h3>
 <%= link_to "Add Event", new_event_path %>
 
 

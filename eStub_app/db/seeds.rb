@@ -19,21 +19,21 @@ c9 = Category.create!(name: "Other")
 
 # User(id: integer, first_name: string, last_name: string, email: text, date_of_birth: date, password_digest: string, profile_pic: text, created_at: datetime, updated_at: datetime)
 
-u1 = User.create!(first_name: 'guest', last_name: 'guestUser', email: 'guest@gmail.com', date_of_birth: "2000-07-19", password: 'guest', password_confirmation: 'guest', profile_pic: 'http://www.fillmurray.com/150/150')
+guest = User.create!(first_name: 'guest', last_name: 'guestUser', email: 'guest@gmail.com', date_of_birth: "2000-07-19", password: 'guest', password_confirmation: 'guest', profile_pic: 'http://www.fillmurray.com/150/150')
 
-u2 = User.create!(first_name: 'Andrea', last_name: 'Mckenzie', email: 'andrea@gmail.com', date_of_birth: "1972-12-28", password: 'andrea', password_confirmation: 'andrea', profile_pic: 'https://avatars3.githubusercontent.com/u/8496575?v=3&s=460')
+andrea = User.create!(first_name: 'Andrea', last_name: 'Mckenzie', email: 'andrea@gmail.com', date_of_birth: "1972-12-28", password: 'andrea', password_confirmation: 'andrea', profile_pic: 'https://avatars3.githubusercontent.com/u/8496575?v=3&s=460')
 
-u3 = User.create!(first_name: 'bob', last_name: 'smith', email: 'bob@gmail.com', date_of_birth: "1985-03-03", password: 'arrow1', password_confirmation: 'arrow1', profile_pic: 'http://www.fillmurray.com/150/150')
+bob = User.create!(first_name: 'bob', last_name: 'smith', email: 'bob@gmail.com', date_of_birth: "1985-03-03", password: 'arrow1', password_confirmation: 'arrow1', profile_pic: 'http://www.fillmurray.com/150/150')
 
-u4 = User.create!(first_name: 'mary', last_name: 'smith', email: 'mary@gmail.com', date_of_birth: "1990-08-03", password: 'mary1', password_confirmation: 'mary1', profile_pic: 'http://www.fillmurray.com/150/150')
+mary = User.create!(first_name: 'mary', last_name: 'smith', email: 'mary@gmail.com', date_of_birth: "1990-08-03", password: 'mary1', password_confirmation: 'mary1', profile_pic: 'http://www.fillmurray.com/150/150')
 
-u5 = User.create!(first_name: 'sally', last_name: 'peters', email: 'sally@gmail.com', date_of_birth: "2000-11-21", password: 'sally1', password_confirmation: 'sally1', profile_pic: 'http://www.fillmurray.com/170/170')
+sally = User.create!(first_name: 'sally', last_name: 'peters', email: 'sally@gmail.com', date_of_birth: "2000-11-21", password: 'sally1', password_confirmation: 'sally1', profile_pic: 'http://www.fillmurray.com/170/170')
 
-u6 = User.create!(first_name: 'april', last_name: 'Brown', email: 'april@gmail.com', date_of_birth: "1995-11-24", password: 'april1', password_confirmation: 'april1', profile_pic: 'http://www.fillmurray.com/150/150')
+april = User.create!(first_name: 'april', last_name: 'Brown', email: 'april@gmail.com', date_of_birth: "1995-11-24", password: 'april1', password_confirmation: 'april1', profile_pic: 'http://www.fillmurray.com/150/150')
 
-u7 = User.create!(first_name: 'ryan', last_name: 'Wilson', email: 'ryan@gmail.com', date_of_birth: "1977-02-24", password: 'ryan', password_confirmation: 'ryan', profile_pic: 'http://www.fillmurray.com/150/150')
+ryan = User.create!(first_name: 'ryan', last_name: 'Wilson', email: 'ryan@gmail.com', date_of_birth: "1977-02-24", password: 'ryan', password_confirmation: 'ryan', profile_pic: 'http://www.fillmurray.com/150/150')
 
-u8 = User.create!(first_name: 'tommy', last_name: 'adams', email: 'tommy@gmail.com', date_of_birth: "1998-03-21", password: 'tommy', password_confirmation: 'tommy', profile_pic: 'http://www.fillmurray.com/150/150')
+tommy = User.create!(first_name: 'tommy', last_name: 'adams', email: 'tommy@gmail.com', date_of_birth: "1998-03-21", password: 'tommy', password_confirmation: 'tommy', profile_pic: 'http://www.fillmurray.com/150/150')
 
 
 

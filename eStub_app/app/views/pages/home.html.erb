@@ -1,20 +1,14 @@
 <div class="home">
   <br />
   <h1>Welcome to eStub</h1>
-  <br/>
+
   <p>eStub is a web app to easily record the details of events you have attended, concerts, films, theatre, sporting events, whatever you would like to record so can look back and reminisce about good times.</p>
 
-  <br/>
-
   <h3>Take your Stubs out of the shoebox and into the eStub</h3>
-
-  <br/>
 
   <% if current_user %>
 
   <h2>Hi, <%= (current_user.first_name).capitalize %></h2>
-
-  <br />
 
   <p>Access your profile here: <%= link_to (current_user.first_name).capitalize + "'s" + " profile", user_path(current_user) %></p>
 
