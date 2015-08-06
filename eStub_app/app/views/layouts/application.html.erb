@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title><%= content_for?(:title) ? yield(:title) : "eStub" %></title>
-  
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-<div>
+  <div class="header">
     <%= render "layouts/header" %>
   </div>
 
-  <main>
+  <main class="wrapper">
 
     <%= yield %>
 
     <div class="push"></div>
 
   </main>
-  <div>
+  <div class="footer">
     <%= render "layouts/footer"%>
   </div>
 
