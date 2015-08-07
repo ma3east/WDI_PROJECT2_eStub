@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   
-  # before_filter :non_footer_action, only: [:show]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, only: [:show]
   
@@ -13,6 +12,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  end
+
+  def disable
+    @disable_footer = true
   end
 
   # GET /users/new

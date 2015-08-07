@@ -2,19 +2,19 @@
 <h1>User Events</h1>
 
 <ul class="add">
-  <li>Name: <%= @event.name %></li>
-  <li>Date: <%= @event.date %></li>
-  <li>Venue: <%= @event.venue %></li>
-  <li>City: <%= @event.city %></li>
+  <li>Name: <%= @event.name %></li><br />
+  <li>Date: <%= @event.date %></li><br />
+  <li>Venue: <%= @event.venue %></li><br />
+  <li>City: <%= @event.city %></li><br />
   
-  <li>Rated: <%= @event.rating %></li>
-  <li>Comments: <%= @event.description %></li>
+  <li>Rated: <%= @event.rating %></li><br />
+  <li>Comments: <%= @event.description %></li><br />
 
   <% if current_user == @event.user %>
 
-  <li>Price: <%= @event.price %></li>
-  <li>Who you were with: <%= @event.accompanied_by %></li>
-  <li>Uploaded by: <%= link_to (@event.user.first_name).capitalize, user_path(@event.user.id) %></li>
+  <li>Price: <%= @event.price %></li><br />
+  <li>Who you were with: <%= @event.accompanied_by %></li><br />
+  <li>Uploaded by: <%= link_to (@event.user.first_name).capitalize, user_path(@event.user.id) %></li><br />
   <li>Was this event shared? <%= @event.share %></li>
 
 </ul>
