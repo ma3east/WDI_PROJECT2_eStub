@@ -19,7 +19,7 @@
 
     <main id="content"><%= yield %></main>
 
-    <div id="footer"><%= render "layouts/footer"%></div>
+    <div id="footer"><%= render "layouts/footer" unless @non_footer_action %></div>
   </div>
   
 </body>

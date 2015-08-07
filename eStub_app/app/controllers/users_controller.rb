@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
+  
+  # before_filter :non_footer_action, only: [:show]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, only: [:show]
-
+  
   # GET /users
   # GET /users.json
   def index

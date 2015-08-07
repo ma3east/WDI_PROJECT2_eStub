@@ -1,7 +1,7 @@
-<h1>Events#show User</h1>
-<p>Find me in app/views/events/showUser.html.erb</p>
+<div class="userEvents">
+<h1>User Events</h1>
 
-<ul>
+<ul class="add">
   <li>Name: <%= @event.name %></li>
   <li>Date: <%= @event.date %></li>
   <li>Venue: <%= @event.venue %></li>
@@ -18,7 +18,7 @@
   <li>Was this event shared? <%= @event.share %></li>
 
 </ul>
-<ul>
+<ul class="add">
   <li>
     <% if @event.stub_file_upload.present? %>
     <%= link_to image_tag(@event.stub_file_upload.thumb.url), @event.stub_file_upload.url %>
@@ -31,11 +31,12 @@
   </li>
 </ul>
 
-<ul>
+<ul class="add">
   <li>Comments: <%= @event.description %></li>
 </ul>
 <% if @event.user.id == current_user.id %>
-<h3>Modify this event:</h3>
+<h3 class="add">Modify this event:</h3>
+<ul class="add">
 <li>
   <%= link_to "Edit", edit_event_path(@event) %>
   <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -51,3 +52,5 @@
 </li>
 <% end %>
 </ul>
+<br />
+</div>
