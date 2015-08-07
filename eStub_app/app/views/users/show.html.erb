@@ -20,7 +20,7 @@
   <% @user.events.each do |event| %>
   <ul class="liblock">
     <li>
-      <%= link_to event.name, event %>
+      <%= link_to (event.name).upcase, event %>
     </li>
   </ul>
   <% end %>

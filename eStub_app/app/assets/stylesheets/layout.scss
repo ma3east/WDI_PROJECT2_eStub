@@ -1,32 +1,27 @@
 html,
 body {
   margin: 0 40px;
-  padding:0;
-  height:100%;
+  padding: 0;
+  height: 100%;
 }
 
 #wrapper {
-  min-height:100%;
-  position:relative;
+  min-height: 100%;
+  position: relative;
 }
 #header {
-  background:#ededed;
-  padding:5px;
+  background: #ededed;
+  padding: 5px;
 }
 #content {
   padding-bottom: 40px;
   // padding-bottom: 150px; /* Height of the footer element */
 }
 
-// html, body {
-//   height: 900px;
-//   margin: 0 30px;
-// }
-
 body {
   font-family: 'Audiowide', cursive;
   background-color: #FD6E8A;
-  color: #181616; //#A2122F;
+  color: #181616; 
   font-size: 100%;
 }
 
@@ -43,7 +38,6 @@ a {
 li {
   list-style-type: none;
 }
-
 
 img {
   width: 150px;

@@ -8,15 +8,6 @@
 
 }
 
-// header a {
-//   color: red;
-//   transition: 0.3s;
-// }
-
-// header a:hover {
-//     background-color: red;
-//     opacity: 0.6;
-// }
 nav {
   background-color: #FFC2CE;
   height: 4.5em;
@@ -31,14 +22,14 @@ ul li {
 
 header a {
     padding: 8px;
-    border: 3px solid #FD6E8A; //#FCB326;
+    border: 3px solid #FD6E8A;
     border-radius: 6px;
     box-shadow: 
     0 2px 1px rgba(0, 0, 0, 0.2), 
     inset 0 2px 1px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     font-size: 18px;
-    color: red; //#222;
+    color: red;
   }
 
   header a:hover {;
