@@ -14,9 +14,9 @@ class UsersController < ApplicationController
   def show
   end
 
-  def disable
-    @disable_footer = true
-  end
+  # def disable
+  #   @disable_footer = true
+  # end
 
   # GET /users/new
   def new
