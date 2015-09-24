@@ -7,6 +7,8 @@ eStub is a web app to easily record the details of events you have attended, con
 
 Take your Stubs out of the shoebox and into the eStub.
 
+The homepage of the app: 
+<img src="./eStub_app/app/assets/images/eStub_HomePage.jpg">
 
 ## Requirements:
 
